@@ -11,10 +11,8 @@ app.set("views", path.join(__dirname, "/"));
 // serve up static CSS files in public/assets/ folder when /public link is called in ejs files
 app.use("/public", express.static("public"));
 
-// use res.render to load up an ejs view file
-
 // index page
-app.get("/", function (req, res) {
+app.get("/theme", function (req, res) {
   res.render("templates/index", { colors });
 });
 
